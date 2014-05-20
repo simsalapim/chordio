@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB17938519282D5E003AE952 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB17938419282D5E003AE952 /* AVFoundation.framework */; };
+		DB17939C19287F28003AE952 /* stripes1.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB17939819287F28003AE952 /* stripes1.wav */; };
+		DB17939D19287F28003AE952 /* stripes2.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB17939919287F28003AE952 /* stripes2.wav */; };
+		DB17939E19287F28003AE952 /* stripes3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB17939A19287F28003AE952 /* stripes3.wav */; };
+		DB1793A5192881A8003AE952 /* stripes4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793A4192881A8003AE952 /* stripes4.wav */; };
+		DB1793DA1928903E003AE952 /* string00.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793C61928903E003AE952 /* string00.wav */; };
+		DB1793EA1928903E003AE952 /* stripes1.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793D61928903E003AE952 /* stripes1.wav */; };
+		DB1793EB1928903E003AE952 /* stripes2.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793D71928903E003AE952 /* stripes2.wav */; };
+		DB1793EC1928903E003AE952 /* stripes3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793D81928903E003AE952 /* stripes3.wav */; };
+		DB1793ED1928903E003AE952 /* stripes4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793D91928903E003AE952 /* stripes4.wav */; };
+		DB1793FE19289978003AE952 /* string00.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793EE19289978003AE952 /* string00.wav */; };
+		DB1793FF19289978003AE952 /* string01.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793EF19289978003AE952 /* string01.wav */; };
+		DB17940019289978003AE952 /* string02.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F019289978003AE952 /* string02.wav */; };
+		DB17940219289978003AE952 /* string10.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F219289978003AE952 /* string10.wav */; };
+		DB17940319289978003AE952 /* string11.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F319289978003AE952 /* string11.wav */; };
+		DB17940419289978003AE952 /* string12.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F419289978003AE952 /* string12.wav */; };
+		DB17940519289978003AE952 /* string13.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F519289978003AE952 /* string13.wav */; };
+		DB17940619289978003AE952 /* string20.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F619289978003AE952 /* string20.wav */; };
+		DB17940719289978003AE952 /* string21.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F719289978003AE952 /* string21.wav */; };
+		DB17940819289978003AE952 /* string22.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F819289978003AE952 /* string22.wav */; };
+		DB17940919289978003AE952 /* string23.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F919289978003AE952 /* string23.wav */; };
+		DB17940A19289978003AE952 /* string30.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793FA19289978003AE952 /* string30.wav */; };
+		DB17940B19289978003AE952 /* string31.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793FB19289978003AE952 /* string31.wav */; };
+		DB17940C19289978003AE952 /* string32.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793FC19289978003AE952 /* string32.wav */; };
+		DB17940D19289978003AE952 /* string33.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793FD19289978003AE952 /* string33.wav */; };
+		DB17940F192899FD003AE952 /* string03.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB17940E192899FD003AE952 /* string03.wav */; };
+		DB34F888192829680047DFC7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB34F885192829680047DFC7 /* CoreAudio.framework */; };
+		DB34F88A19282D230047DFC7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB34F88919282D230047DFC7 /* AudioToolbox.framework */; };
+		DB59392F1927A1BE003E94B8 /* BLEMainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5939241927A1BE003E94B8 /* BLEMainViewController_iPhone.xib */; };
+		DB5939421927B78B003E94B8 /* CBUUID+StringExtraction.m in Sources */ = {isa = PBXBuildFile; fileRef = DB59393B1927B78B003E94B8 /* CBUUID+StringExtraction.m */; };
+		DB5939431927B78B003E94B8 /* NSData+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = DB59393D1927B78B003E94B8 /* NSData+hex.m */; };
+		DB5939441927B78B003E94B8 /* NSString+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = DB59393F1927B78B003E94B8 /* NSString+hex.m */; };
+		DB5939451927B78B003E94B8 /* UITextView+lineCount.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5939411927B78B003E94B8 /* UITextView+lineCount.m */; };
+		DB5939471927BC9A003E94B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5939461927BC9A003E94B8 /* UIKit.framework */; };
+		F05E7E0318BEF399005E25F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05E7E0218BEF399005E25F6 /* Images.xcassets */; };
+		F08CE411188FD0C10098A4BD /* UARTPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = F08CE410188FD0C10098A4BD /* UARTPeripheral.m */; };
+		F0A2C96C16BBE44500F2FD12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A2C96B16BBE44500F2FD12 /* Foundation.framework */; };
+		F0A2C96E16BBE44500F2FD12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A2C96D16BBE44500F2FD12 /* CoreGraphics.framework */; };
+		F0A2C97416BBE44500F2FD12 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0A2C97216BBE44500F2FD12 /* InfoPlist.strings */; };
+		F0A2C97616BBE44500F2FD12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A2C97516BBE44500F2FD12 /* main.m */; };
+		F0A2C97A16BBE44500F2FD12 /* BLEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A2C97916BBE44500F2FD12 /* BLEAppDelegate.m */; };
+		F0A2C98316BBE44500F2FD12 /* BLEMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A2C98216BBE44500F2FD12 /* BLEMainViewController.m */; };
+		F0A2C99D16BBED8F00F2FD12 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A2C99C16BBED8E00F2FD12 /* CoreBluetooth.framework */; };
+		F0C47C1F16C23D67002EFADA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C47C1E16C23D67002EFADA /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DB17938419282D5E003AE952 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DB17939819287F28003AE952 /* stripes1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes1.wav; sourceTree = "<group>"; };
+		DB17939919287F28003AE952 /* stripes2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes2.wav; sourceTree = "<group>"; };
+		DB17939A19287F28003AE952 /* stripes3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes3.wav; sourceTree = "<group>"; };
+		DB1793A4192881A8003AE952 /* stripes4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes4.wav; sourceTree = "<group>"; };
+		DB1793C61928903E003AE952 /* string00.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string00.wav; sourceTree = "<group>"; };
+		DB1793D61928903E003AE952 /* stripes1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes1.wav; sourceTree = "<group>"; };
+		DB1793D71928903E003AE952 /* stripes2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes2.wav; sourceTree = "<group>"; };
+		DB1793D81928903E003AE952 /* stripes3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes3.wav; sourceTree = "<group>"; };
+		DB1793D91928903E003AE952 /* stripes4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes4.wav; sourceTree = "<group>"; };
+		DB1793EE19289978003AE952 /* string00.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string00.wav; sourceTree = "<group>"; };
+		DB1793EF19289978003AE952 /* string01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string01.wav; sourceTree = "<group>"; };
+		DB1793F019289978003AE952 /* string02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string02.wav; sourceTree = "<group>"; };
+		DB1793F219289978003AE952 /* string10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string10.wav; sourceTree = "<group>"; };
+		DB1793F319289978003AE952 /* string11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string11.wav; sourceTree = "<group>"; };
+		DB1793F419289978003AE952 /* string12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string12.wav; sourceTree = "<group>"; };
+		DB1793F519289978003AE952 /* string13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string13.wav; sourceTree = "<group>"; };
+		DB1793F619289978003AE952 /* string20.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string20.wav; sourceTree = "<group>"; };
+		DB1793F719289978003AE952 /* string21.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string21.wav; sourceTree = "<group>"; };
+		DB1793F819289978003AE952 /* string22.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string22.wav; sourceTree = "<group>"; };
+		DB1793F919289978003AE952 /* string23.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string23.wav; sourceTree = "<group>"; };
+		DB1793FA19289978003AE952 /* string30.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string30.wav; sourceTree = "<group>"; };
+		DB1793FB19289978003AE952 /* string31.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string31.wav; sourceTree = "<group>"; };
+		DB1793FC19289978003AE952 /* string32.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string32.wav; sourceTree = "<group>"; };
+		DB1793FD19289978003AE952 /* string33.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string33.wav; sourceTree = "<group>"; };
+		DB17940E192899FD003AE952 /* string03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string03.wav; sourceTree = "<group>"; };
+		DB34F885192829680047DFC7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		DB34F88919282D230047DFC7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DB5939251927A1BE003E94B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BLEMainViewController_iPhone.xib; sourceTree = "<group>"; };
+		DB59393A1927B78B003E94B8 /* CBUUID+StringExtraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CBUUID+StringExtraction.h"; path = "../../Bluefruit_LE_Connect-master/BLE Test/CBUUID+StringExtraction.h"; sourceTree = "<group>"; };
+		DB59393B1927B78B003E94B8 /* CBUUID+StringExtraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CBUUID+StringExtraction.m"; path = "../../Bluefruit_LE_Connect-master/BLE Test/CBUUID+StringExtraction.m"; sourceTree = "<group>"; };
+		DB59393C1927B78B003E94B8 /* NSData+hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+hex.h"; path = "../../Bluefruit_LE_Connect-master/BLE Test/NSData+hex.h"; sourceTree = "<group>"; };
+		DB59393D1927B78B003E94B8 /* NSData+hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+hex.m"; path = "../../Bluefruit_LE_Connect-master/BLE Test/NSData+hex.m"; sourceTree = "<group>"; };
+		DB59393E1927B78B003E94B8 /* NSString+hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+hex.h"; path = "../../Bluefruit_LE_Connect-master/BLE Test/NSString+hex.h"; sourceTree = "<group>"; };
+		DB59393F1927B78B003E94B8 /* NSString+hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+hex.m"; path = "../../Bluefruit_LE_Connect-master/BLE Test/NSString+hex.m"; sourceTree = "<group>"; };
+		DB5939401927B78B003E94B8 /* UITextView+lineCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+lineCount.h"; path = "../../Bluefruit_LE_Connect-master/BLE Test/UITextView+lineCount.h"; sourceTree = "<group>"; };
+		DB5939411927B78B003E94B8 /* UITextView+lineCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+lineCount.m"; path = "../../Bluefruit_LE_Connect-master/BLE Test/UITextView+lineCount.m"; sourceTree = "<group>"; };
+		DB5939461927BC9A003E94B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F05E7E0218BEF399005E25F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Adafruit Bluefruit LE Connect/Images.xcassets"; sourceTree = "<group>"; };
+		F08CE40F188FD0C10098A4BD /* UARTPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UARTPeripheral.h; sourceTree = "<group>"; };
+		F08CE410188FD0C10098A4BD /* UARTPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARTPeripheral.m; sourceTree = "<group>"; };
+		F0A2C96616BBE44500F2FD12 /* BluetoothLE Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BluetoothLE Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A2C96B16BBE44500F2FD12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F0A2C96D16BBE44500F2FD12 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F0A2C97116BBE44500F2FD12 /* BluetoothLE Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BluetoothLE Test-Info.plist"; sourceTree = "<group>"; };
+		F0A2C97316BBE44500F2FD12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F0A2C97516BBE44500F2FD12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0A2C97716BBE44500F2FD12 /* BluetoothLE Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BluetoothLE Test-Prefix.pch"; sourceTree = "<group>"; };
+		F0A2C97816BBE44500F2FD12 /* BLEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEAppDelegate.h; sourceTree = "<group>"; };
+		F0A2C97916BBE44500F2FD12 /* BLEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEAppDelegate.m; sourceTree = "<group>"; };
+		F0A2C98116BBE44500F2FD12 /* BLEMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEMainViewController.h; sourceTree = "<group>"; };
+		F0A2C98216BBE44500F2FD12 /* BLEMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEMainViewController.m; sourceTree = "<group>"; };
+		F0A2C99C16BBED8E00F2FD12 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		F0C47C1E16C23D67002EFADA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0A2C96316BBE44500F2FD12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB17938519282D5E003AE952 /* AVFoundation.framework in Frameworks */,
+				DB34F88A19282D230047DFC7 /* AudioToolbox.framework in Frameworks */,
+				DB34F888192829680047DFC7 /* CoreAudio.framework in Frameworks */,
+				F0C47C1F16C23D67002EFADA /* QuartzCore.framework in Frameworks */,
+				F0A2C99D16BBED8F00F2FD12 /* CoreBluetooth.framework in Frameworks */,
+				F0A2C96C16BBE44500F2FD12 /* Foundation.framework in Frameworks */,
+				F0A2C96E16BBE44500F2FD12 /* CoreGraphics.framework in Frameworks */,
+				DB5939471927BC9A003E94B8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB17938619282DFC003AE952 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DB17939819287F28003AE952 /* stripes1.wav */,
+				DB17939919287F28003AE952 /* stripes2.wav */,
+				DB1793C61928903E003AE952 /* string00.wav */,
+				DB1793EE19289978003AE952 /* string00.wav */,
+				DB1793EF19289978003AE952 /* string01.wav */,
+				DB1793F019289978003AE952 /* string02.wav */,
+				DB17940E192899FD003AE952 /* string03.wav */,
+				DB1793F219289978003AE952 /* string10.wav */,
+				DB1793F319289978003AE952 /* string11.wav */,
+				DB1793F419289978003AE952 /* string12.wav */,
+				DB1793F519289978003AE952 /* string13.wav */,
+				DB1793F619289978003AE952 /* string20.wav */,
+				DB1793F719289978003AE952 /* string21.wav */,
+				DB1793F819289978003AE952 /* string22.wav */,
+				DB1793F919289978003AE952 /* string23.wav */,
+				DB1793FA19289978003AE952 /* string30.wav */,
+				DB1793FB19289978003AE952 /* string31.wav */,
+				DB1793FC19289978003AE952 /* string32.wav */,
+				DB1793FD19289978003AE952 /* string33.wav */,
+				DB1793D61928903E003AE952 /* stripes1.wav */,
+				DB1793D71928903E003AE952 /* stripes2.wav */,
+				DB1793D81928903E003AE952 /* stripes3.wav */,
+				DB1793D91928903E003AE952 /* stripes4.wav */,
+				DB1793A4192881A8003AE952 /* stripes4.wav */,
+				DB17939A19287F28003AE952 /* stripes3.wav */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		F08BFF4618A4F7C400EF43FB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DB59393A1927B78B003E94B8 /* CBUUID+StringExtraction.h */,
+				DB59393B1927B78B003E94B8 /* CBUUID+StringExtraction.m */,
+				DB59393C1927B78B003E94B8 /* NSData+hex.h */,
+				DB59393D1927B78B003E94B8 /* NSData+hex.m */,
+				DB59393E1927B78B003E94B8 /* NSString+hex.h */,
+				DB59393F1927B78B003E94B8 /* NSString+hex.m */,
+				DB5939401927B78B003E94B8 /* UITextView+lineCount.h */,
+				DB5939411927B78B003E94B8 /* UITextView+lineCount.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		F08BFF4718A4F7E600EF43FB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DB5939241927A1BE003E94B8 /* BLEMainViewController_iPhone.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		F0A2C95D16BBE44500F2FD12 = {
+			isa = PBXGroup;
+			children = (
+				F05E7E0218BEF399005E25F6 /* Images.xcassets */,
+				F0A2C96F16BBE44500F2FD12 /* Classes */,
+				F0A2C96816BBE44500F2FD12 /* Frameworks */,
+				F0A2C96716BBE44500F2FD12 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0A2C96716BBE44500F2FD12 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0A2C96616BBE44500F2FD12 /* BluetoothLE Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0A2C96816BBE44500F2FD12 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB17938419282D5E003AE952 /* AVFoundation.framework */,
+				DB34F88919282D230047DFC7 /* AudioToolbox.framework */,
+				DB34F885192829680047DFC7 /* CoreAudio.framework */,
+				DB5939461927BC9A003E94B8 /* UIKit.framework */,
+				F0C47C1E16C23D67002EFADA /* QuartzCore.framework */,
+				F0A2C99C16BBED8E00F2FD12 /* CoreBluetooth.framework */,
+				F0A2C96B16BBE44500F2FD12 /* Foundation.framework */,
+				F0A2C96D16BBE44500F2FD12 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0A2C96F16BBE44500F2FD12 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F08BFF4618A4F7C400EF43FB /* Categories */,
+				F0A2C97016BBE44500F2FD12 /* Supporting Files */,
+				F08BFF4718A4F7E600EF43FB /* UI */,
+				F0A2C97816BBE44500F2FD12 /* BLEAppDelegate.h */,
+				F0A2C97916BBE44500F2FD12 /* BLEAppDelegate.m */,
+				DB17938619282DFC003AE952 /* sounds */,
+				F0A2C98116BBE44500F2FD12 /* BLEMainViewController.h */,
+				F0A2C98216BBE44500F2FD12 /* BLEMainViewController.m */,
+				F08CE40F188FD0C10098A4BD /* UARTPeripheral.h */,
+				F08CE410188FD0C10098A4BD /* UARTPeripheral.m */,
+			);
+			name = Classes;
+			path = "BLE Test";
+			sourceTree = "<group>";
+		};
+		F0A2C97016BBE44500F2FD12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0A2C97116BBE44500F2FD12 /* BluetoothLE Test-Info.plist */,
+				F0A2C97216BBE44500F2FD12 /* InfoPlist.strings */,
+				F0A2C97516BBE44500F2FD12 /* main.m */,
+				F0A2C97716BBE44500F2FD12 /* BluetoothLE Test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0A2C96516BBE44500F2FD12 /* Adafruit Bluefruit LE Connect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0A2C99216BBE44500F2FD12 /* Build configuration list for PBXNativeTarget "Adafruit Bluefruit LE Connect" */;
+			buildPhases = (
+				F0A2C96216BBE44500F2FD12 /* Sources */,
+				F0A2C96316BBE44500F2FD12 /* Frameworks */,
+				F0A2C96416BBE44500F2FD12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Adafruit Bluefruit LE Connect";
+			productName = "BLE Test";
+			productReference = F0A2C96616BBE44500F2FD12 /* BluetoothLE Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0A2C95E16BBE44500F2FD12 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BLE;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Adafruit Industries";
+				TargetAttributes = {
+					F0A2C96516BBE44500F2FD12 = {
+						DevelopmentTeam = 63FJ7N5VK8;
+					};
+				};
+			};
+			buildConfigurationList = F0A2C96116BBE44500F2FD12 /* Build configuration list for PBXProject "chordioBLE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F0A2C95D16BBE44500F2FD12;
+			productRefGroup = F0A2C96716BBE44500F2FD12 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0A2C96516BBE44500F2FD12 /* Adafruit Bluefruit LE Connect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0A2C96416BBE44500F2FD12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB1793FF19289978003AE952 /* string01.wav in Resources */,
+				DB17940B19289978003AE952 /* string31.wav in Resources */,
+				DB17939D19287F28003AE952 /* stripes2.wav in Resources */,
+				F0A2C97416BBE44500F2FD12 /* InfoPlist.strings in Resources */,
+				DB1793EC1928903E003AE952 /* stripes3.wav in Resources */,
+				DB1793A5192881A8003AE952 /* stripes4.wav in Resources */,
+				DB17940F192899FD003AE952 /* string03.wav in Resources */,
+				DB17940A19289978003AE952 /* string30.wav in Resources */,
+				DB17940619289978003AE952 /* string20.wav in Resources */,
+				DB17940D19289978003AE952 /* string33.wav in Resources */,
+				DB1793EA1928903E003AE952 /* stripes1.wav in Resources */,
+				DB17940719289978003AE952 /* string21.wav in Resources */,
+				DB17940019289978003AE952 /* string02.wav in Resources */,
+				F05E7E0318BEF399005E25F6 /* Images.xcassets in Resources */,
+				DB1793ED1928903E003AE952 /* stripes4.wav in Resources */,
+				DB17940919289978003AE952 /* string23.wav in Resources */,
+				DB17940C19289978003AE952 /* string32.wav in Resources */,
+				DB17940419289978003AE952 /* string12.wav in Resources */,
+				DB17940519289978003AE952 /* string13.wav in Resources */,
+				DB59392F1927A1BE003E94B8 /* BLEMainViewController_iPhone.xib in Resources */,
+				DB17939E19287F28003AE952 /* stripes3.wav in Resources */,
+				DB17940219289978003AE952 /* string10.wav in Resources */,
+				DB1793FE19289978003AE952 /* string00.wav in Resources */,
+				DB1793EB1928903E003AE952 /* stripes2.wav in Resources */,
+				DB17940319289978003AE952 /* string11.wav in Resources */,
+				DB17939C19287F28003AE952 /* stripes1.wav in Resources */,
+				DB17940819289978003AE952 /* string22.wav in Resources */,
+				DB1793DA1928903E003AE952 /* string00.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0A2C96216BBE44500F2FD12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5939431927B78B003E94B8 /* NSData+hex.m in Sources */,
+				F0A2C97616BBE44500F2FD12 /* main.m in Sources */,
+				DB5939441927B78B003E94B8 /* NSString+hex.m in Sources */,
+				DB5939451927B78B003E94B8 /* UITextView+lineCount.m in Sources */,
+				DB5939421927B78B003E94B8 /* CBUUID+StringExtraction.m in Sources */,
+				F0A2C97A16BBE44500F2FD12 /* BLEAppDelegate.m in Sources */,
+				F0A2C98316BBE44500F2FD12 /* BLEMainViewController.m in Sources */,
+				F08CE411188FD0C10098A4BD /* UARTPeripheral.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DB5939241927A1BE003E94B8 /* BLEMainViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB5939251927A1BE003E94B8 /* en */,
+			);
+			name = BLEMainViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		F0A2C97216BBE44500F2FD12 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0A2C97316BBE44500F2FD12 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0A2C99016BBE44500F2FD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0A2C99116BBE44500F2FD12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "F0F391F0-C781-4C8F-8735-1CB89D26B730";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0A2C99316BBE44500F2FD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLE Test/BluetoothLE Test-Prefix.pch";
+				INFOPLIST_FILE = "BLE Test/BluetoothLE Test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "BluetoothLE Test";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F0A2C99416BBE44500F2FD12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLE Test/BluetoothLE Test-Prefix.pch";
+				INFOPLIST_FILE = "BLE Test/BluetoothLE Test-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "BluetoothLE Test";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0A2C96116BBE44500F2FD12 /* Build configuration list for PBXProject "chordioBLE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0A2C99016BBE44500F2FD12 /* Debug */,
+				F0A2C99116BBE44500F2FD12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0A2C99216BBE44500F2FD12 /* Build configuration list for PBXNativeTarget "Adafruit Bluefruit LE Connect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0A2C99316BBE44500F2FD12 /* Debug */,
+				F0A2C99416BBE44500F2FD12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0A2C95E16BBE44500F2FD12 /* Project object */;
+}
