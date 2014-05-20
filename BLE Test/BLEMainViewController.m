@@ -21,30 +21,27 @@ int string1[3]={0,0,0};
 int string2[3]={0,0,0};
 int string3[3]={0,0,0};
 
-AVAudioPlayer *string00[10];
-AVAudioPlayer *string01[10];
-AVAudioPlayer *string02[10];
-AVAudioPlayer *string03[10];
+AVAudioPlayer *tone00[10];
+AVAudioPlayer *tone01[10];
+AVAudioPlayer *tone02[10];
+AVAudioPlayer *tone03[10];
 
-AVAudioPlayer *string10[10];
-AVAudioPlayer *string11[10];
-AVAudioPlayer *string12[10];
-AVAudioPlayer *string13[10];
+AVAudioPlayer *tone10[10];
+AVAudioPlayer *tone11[10];
+AVAudioPlayer *tone12[10];
+AVAudioPlayer *tone13[10];
 
-AVAudioPlayer *string20[10];
-AVAudioPlayer *string21[10];
-AVAudioPlayer *string22[10];
-AVAudioPlayer *string23[10];
+AVAudioPlayer *tone20[10];
+AVAudioPlayer *tone21[10];
+AVAudioPlayer *tone22[10];
+AVAudioPlayer *tone23[10];
 
-AVAudioPlayer *string30[10];
-AVAudioPlayer *string31[10];
-AVAudioPlayer *string32[10];
-AVAudioPlayer *string33[10];
+AVAudioPlayer *tone30[10];
+AVAudioPlayer *tone31[10];
+AVAudioPlayer *tone32[10];
+AVAudioPlayer *tone33[10];
 
-int _currentChannel1=0;
-int _currentChannel2=0;
-int _currentChannel3=0;
-int _currentChannel4=0;
+int _currentChannel=0;
 
 @interface BLEMainViewController ()<UIAlertViewDelegate>{
     
@@ -56,138 +53,36 @@ int _currentChannel4=0;
 @end
 
 @implementation BLEMainViewController
-- (IBAction)button1down:(id)sender {
-    NSLog(@"buttonDown: 1");
-    string0[0]=1;
 
-}
-- (IBAction)button2down:(id)sender {
-    NSLog(@"buttonDown: 2");
-    string1[0]=1;
-
-}
-
-- (IBAction)button3down:(id)sender {
-    NSLog(@"buttonDown: 3");
-    string2[0]=1;
-
-}
-- (IBAction)button4down:(id)sender {
-    NSLog(@"buttonDown: 4");
-    string3[0]=1;
-
-}
-- (IBAction)button5down:(id)sender {
-    NSLog(@"buttonDown: 5");
-    string0[1]=1;
-
-}
-- (IBAction)button6down:(id)sender {
-    NSLog(@"buttonDown: 6");
-    string1[1]=1;
-
-}
-- (IBAction)button7down:(id)sender {
-    NSLog(@"buttonDown: 7");
-    string2[1]=1;
-
-}
-- (IBAction)button8down:(id)sender {
-    NSLog(@"buttonDown: 8");
-    string3[1]=1;
-
-}
-- (IBAction)button9down:(id)sender {
-    NSLog(@"buttonDown: 9");
-    string0[2]=1;
-
-}
-- (IBAction)button10down:(id)sender {
-    NSLog(@"buttonDown: 10");
-    string1[2]=1;
-
-}
-- (IBAction)button11down:(id)sender {
-    NSLog(@"buttonDown: 11");
-    string2[2]=1;
-
-}
-- (IBAction)button12down:(id)sender {
-    NSLog(@"buttondown: 12");
-    string3[2]=1;
+//Keep track of when buttons are being held down
+- (IBAction)buttonDown:(UIButton *)sender {
+    NSLog(@"buttonDown: %d", sender.tag);
+    if(sender.tag==0||sender.tag==1||sender.tag==2||sender.tag==3){
+        string0[0]=1;
+    }
+    if(sender.tag==10||sender.tag==11||sender.tag==12||sender.tag==13){
+        string0[1]=1;
+    }
+    if(sender.tag==20||sender.tag==21||sender.tag==22||sender.tag==23){
+        string0[2]=1;
+    }
 
 }
 
-
-- (IBAction)buttonUp:(id)sender {
-    UIButton *btn2 = (UIButton *)sender;
-    
-    NSString *tone =btn2.titleLabel.text;
-    if([tone isEqual:@"tone1"]){
-        NSLog(@"buttonup: 1");
+//... and when they are released 
+- (IBAction)buttonUp:(UIButton *)sender {
+    NSLog(@"buttonUp: %d", sender.tag);
+    if(sender.tag==0||sender.tag==1||sender.tag==2||sender.tag==3){
         string0[0]=0;
     }
-    if([tone isEqual:@"tone2"]){
-        NSLog(@"buttonup: 2");
-        string1[0]=0;
-        
-    }
-    if([tone isEqual:@"tone3"]){
-        NSLog(@"buttonup: 3");
-        string2[0]=0;
-        
-    }
-    
-    if([tone isEqual:@"tone4"]){
-        NSLog(@"buttonup: 4");
-        string3[0]=0;
-        
-    }
-
-    if([tone isEqual:@"tone5"]){
-        NSLog(@"buttonup: 5");
+    if(sender.tag==4||sender.tag==5||sender.tag==6||sender.tag==7){
         string0[1]=0;
-        
     }
-    if([tone isEqual:@"tone6"]){
-        NSLog(@"buttonup: 6");
-        string1[1]=0;
-        
-    }
-    if([tone isEqual:@"tone7"]){
-        NSLog(@"buttonup: 7");
-        string2[1]=0;
-        
-    }
-    if([tone isEqual:@"tone8"]){
-        NSLog(@"buttonup: 8");
-        string3[1]=0;
-        
-    }
-
-    
-    if([tone isEqual:@"tone9"]){
-        NSLog(@"buttonup: 9");
+    if(sender.tag==8||sender.tag==9||sender.tag==10||sender.tag==11){
         string0[2]=0;
-        
     }
-    if([tone isEqual:@"tone10"]){
-        NSLog(@"buttonup: 10");
-        string1[2]=0;
-        
-    }
-    if([tone isEqual:@"tone11"]){
-        NSLog(@"buttonup: 11");
-        string2[2]=0;
-        
-    }
-    if([tone isEqual:@"tone12"]){
-        NSLog(@"buttonup: 12");
-        string3[2]=0;
-        
-    }
-
-
+    
+    
 }
 
 #pragma mark - View Lifecycle
@@ -265,46 +160,28 @@ int _currentChannel4=0;
 
     NSError *error;
     for(int i=0;i<10;i++){
-        string00[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url00 error:&error];
-        string01[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url01 error:&error];
-        string02[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url02 error:&error];
-        string03[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url03 error:&error];
+        tone00[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url00 error:&error];
+        tone01[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url01 error:&error];
+        tone02[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url02 error:&error];
+        tone03[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url03 error:&error];
 
-        string10[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url10 error:&error];
-        string11[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url11 error:&error];
-        string12[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url12 error:&error];
-        string13[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url13 error:&error];
+        tone10[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url10 error:&error];
+        tone11[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url11 error:&error];
+        tone12[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url12 error:&error];
+        tone13[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url13 error:&error];
 
-        string20[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url20 error:&error];
-        string21[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url21 error:&error];
-        string22[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url22 error:&error];
-        string23[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url23 error:&error];
+        tone20[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url20 error:&error];
+        tone21[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url21 error:&error];
+        tone22[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url22 error:&error];
+        tone23[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url23 error:&error];
 
-        string30[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url30 error:&error];
-        string31[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url31 error:&error];
-        string32[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url32 error:&error];
-        string33[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url33 error:&error];
+        tone30[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url30 error:&error];
+        tone31[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url31 error:&error];
+        tone32[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url32 error:&error];
+        tone33[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url33 error:&error];
 
     }
 
-//    tone1 = [[AVAudioPlayer alloc]
-//                    initWithContentsOfURL:url1
-//                    error:&error];
-//    tone2 = [[AVAudioPlayer alloc]
-//                    initWithContentsOfURL:url2
-//                    error:&error];
-//    tone3 = [[AVAudioPlayer alloc]
-//             initWithContentsOfURL:url3
-//             error:&error];
-//    tone4 = [[AVAudioPlayer alloc]
-//             initWithContentsOfURL:url4
-//             error:&error];
-//    tone5 = [[AVAudioPlayer alloc]
-//             initWithContentsOfURL:url5
-//             error:&error];
-//    tone6 = [[AVAudioPlayer alloc]
-//             initWithContentsOfURL:url6
-//             error:&error];
 
     if (error)
     {
@@ -317,10 +194,6 @@ int _currentChannel4=0;
     }
     
     [self.view setAutoresizesSubviews:YES];
-    
-    //UILabel *label1 =[[UILabel alloc] initWithFrame:CGRectMake(0,0,200,50)];
-    //label1.text=@"hello2!";
-    //[self.view addSubview:label1];
 	
     
     cm = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
@@ -581,51 +454,45 @@ int _currentChannel4=0;
 
         //send data to UART Controller
         NSString* stringNumber = [NSString stringWithFormat:@"%@", newData];
+        _currentChannel++;
+        if (_currentChannel == 10) {
+            _currentChannel = 0;
+        }
         if([stringNumber isEqual:@"<00>"]){
-            _currentChannel1++;
-            if (_currentChannel1 == 10) {
-                _currentChannel1 = 0;
-            }
-
             NSLog(@"it's zero bro");
                 if(string0[0]==1){
-                    [string01[_currentChannel1] play];
+                    [tone01[_currentChannel] play];
                 }
                 else if(string0[1]==1){
-                    [string02[_currentChannel1] play];
+                    [tone02[_currentChannel] play];
                 
                 }
-                else if(string0[2]==1){ //FUNKAR INTE
-                    [string03[_currentChannel1] play];
+                else if(string0[2]==1){
+                    [tone03[_currentChannel] play];
 
                 }
                 else{
-                    [string00[_currentChannel1] play];
+                    [tone00[_currentChannel] play];
 
                 }
             
         }
         
         else if([stringNumber isEqual:@"<01>"]&&string1!=nil){
-            _currentChannel2++;
-            if (_currentChannel2 == 10) {
-                _currentChannel2 = 0;
-            }
-
             NSLog(@"it's 1 bro");
             if(string1[0]==1){
-                [string11[_currentChannel2] play];
+                [tone11[_currentChannel] play];
             }
             else if(string1[1]==1){
-                [string12[_currentChannel2] play];
+                [tone12[_currentChannel] play];
                 
             }
-            else if(string1[2]==1){ //FUNKAR EJ
-                [string13[_currentChannel2] play];
+            else if(string1[2]==1){
+                [tone13[_currentChannel] play];
                 
             }
             else{
-                [string10[_currentChannel2] play];
+                [tone10[_currentChannel] play];
                 
             }
             
@@ -634,52 +501,41 @@ int _currentChannel4=0;
         
         
         else if([stringNumber isEqual:@"<02>"]){
-            _currentChannel3++;
-            if (_currentChannel3 == 10) {
-                _currentChannel3 = 0;
-            }
-
 
             NSLog(@"it's 2 bro");
             if(string2[0]==1){
-                [string21[_currentChannel3] play];
+                [tone21[_currentChannel] play];
             }
             else if(string2[1]==1){
-                [string22[_currentChannel3] play];
+                [tone22[_currentChannel] play];
                 
             }
-            else if(string2[2]==1){ //FUNKAR INTE
-                [string23[_currentChannel3] play];
+            else if(string2[2]==1){
+                [tone23[_currentChannel] play];
                 
             }
             else{
-                [string20[_currentChannel3] play];
+                [tone20[_currentChannel] play];
                 
             }
 
             
         }
         else if([stringNumber isEqual:@"<03>"]){
-            _currentChannel4++;
-            if (_currentChannel4 == 10) {
-                _currentChannel4 = 0;
-            }
-       
-
             NSLog(@"it's 3 bro");
             if(string3[0]==1){
-                [string31[_currentChannel4] play];
+                [tone31[_currentChannel] play];
             }
             else if(string3[1]==1){
-                [string32[_currentChannel4] play];
+                [tone32[_currentChannel] play];
                 
             }
-            else if(string3[2]==1){ //FUNKAR INTE
-                [string33[_currentChannel4] play];
+            else if(string3[2]==1){
+                [tone33[_currentChannel] play];
                 
             }
             else{
-                [string30[_currentChannel4] play];
+                [tone30[_currentChannel] play];
                 
             }
             }
