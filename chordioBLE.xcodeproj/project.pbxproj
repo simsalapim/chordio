@@ -24,6 +24,7 @@
 		DB17940C19289978003AE952 /* string32.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793FC19289978003AE952 /* string32.wav */; };
 		DB17940D19289978003AE952 /* string33.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793FD19289978003AE952 /* string33.wav */; };
 		DB17940F192899FD003AE952 /* string03.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB17940E192899FD003AE952 /* string03.wav */; };
+		DB191BEC192CC8FA00E392A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB191BEB192CC8FA00E392A8 /* Images.xcassets */; };
 		DB34F888192829680047DFC7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB34F885192829680047DFC7 /* CoreAudio.framework */; };
 		DB34F88A19282D230047DFC7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB34F88919282D230047DFC7 /* AudioToolbox.framework */; };
 		DB59392F1927A1BE003E94B8 /* BLEMainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5939241927A1BE003E94B8 /* BLEMainViewController_iPhone.xib */; };
@@ -32,7 +33,6 @@
 		DB5939441927B78B003E94B8 /* NSString+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = DB59393F1927B78B003E94B8 /* NSString+hex.m */; };
 		DB5939451927B78B003E94B8 /* UITextView+lineCount.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5939411927B78B003E94B8 /* UITextView+lineCount.m */; };
 		DB5939471927BC9A003E94B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5939461927BC9A003E94B8 /* UIKit.framework */; };
-		F05E7E0318BEF399005E25F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05E7E0218BEF399005E25F6 /* Images.xcassets */; };
 		F08CE411188FD0C10098A4BD /* UARTPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = F08CE410188FD0C10098A4BD /* UARTPeripheral.m */; };
 		F0A2C96C16BBE44500F2FD12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A2C96B16BBE44500F2FD12 /* Foundation.framework */; };
 		F0A2C96E16BBE44500F2FD12 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A2C96D16BBE44500F2FD12 /* CoreGraphics.framework */; };
@@ -62,6 +62,7 @@
 		DB1793FC19289978003AE952 /* string32.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string32.wav; sourceTree = "<group>"; };
 		DB1793FD19289978003AE952 /* string33.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string33.wav; sourceTree = "<group>"; };
 		DB17940E192899FD003AE952 /* string03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string03.wav; sourceTree = "<group>"; };
+		DB191BEB192CC8FA00E392A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DB34F885192829680047DFC7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		DB34F88919282D230047DFC7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DB5939251927A1BE003E94B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BLEMainViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -74,7 +75,6 @@
 		DB5939401927B78B003E94B8 /* UITextView+lineCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+lineCount.h"; path = "../../Bluefruit_LE_Connect-master/BLE Test/UITextView+lineCount.h"; sourceTree = "<group>"; };
 		DB5939411927B78B003E94B8 /* UITextView+lineCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+lineCount.m"; path = "../../Bluefruit_LE_Connect-master/BLE Test/UITextView+lineCount.m"; sourceTree = "<group>"; };
 		DB5939461927BC9A003E94B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F05E7E0218BEF399005E25F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Adafruit Bluefruit LE Connect/Images.xcassets"; sourceTree = "<group>"; };
 		F08CE40F188FD0C10098A4BD /* UARTPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UARTPeripheral.h; sourceTree = "<group>"; };
 		F08CE410188FD0C10098A4BD /* UARTPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARTPeripheral.m; sourceTree = "<group>"; };
 		F0A2C96616BBE44500F2FD12 /* BluetoothLE Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BluetoothLE Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,7 +160,7 @@
 		F0A2C95D16BBE44500F2FD12 = {
 			isa = PBXGroup;
 			children = (
-				F05E7E0218BEF399005E25F6 /* Images.xcassets */,
+				DB191BEB192CC8FA00E392A8 /* Images.xcassets */,
 				F0A2C96F16BBE44500F2FD12 /* Classes */,
 				F0A2C96816BBE44500F2FD12 /* Frameworks */,
 				F0A2C96716BBE44500F2FD12 /* Products */,
@@ -277,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1793FF19289978003AE952 /* string01.wav in Resources */,
+				DB191BEC192CC8FA00E392A8 /* Images.xcassets in Resources */,
 				DB17940B19289978003AE952 /* string31.wav in Resources */,
 				F0A2C97416BBE44500F2FD12 /* InfoPlist.strings in Resources */,
 				DB17940F192899FD003AE952 /* string03.wav in Resources */,
@@ -285,7 +286,6 @@
 				DB17940D19289978003AE952 /* string33.wav in Resources */,
 				DB17940719289978003AE952 /* string21.wav in Resources */,
 				DB17940019289978003AE952 /* string02.wav in Resources */,
-				F05E7E0318BEF399005E25F6 /* Images.xcassets in Resources */,
 				DB17940919289978003AE952 /* string23.wav in Resources */,
 				DB17940C19289978003AE952 /* string32.wav in Resources */,
 				DB17940419289978003AE952 /* string12.wav in Resources */,
