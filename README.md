@@ -1,18 +1,10 @@
-Bluefruit LE Connect
+Chordio
 =================
+![Alt text](http://simsalapim.github.io/chordiopages/chordio.png "Mockup")
 
-iOS app for use with Adafruit's Bluefruit LE breakout board connected to Arduino
+iOS app for an iPhone case with retractable guitar strings.
 
-Pick up a breakout to use along with this app here: http://www.adafruit.com/products/1697
+Uses an Arduino to monitor which strigns have been plucked and sends the data over Bluetooth LE.
 
-Project tutorial: http://learn.adafruit.com/getting-started-with-the-nrf8001-bluefruit-le-breakout
-
-In progress!
-
-Adafruit invests time and resources providing this open source code, please support Adafruit and open-source hardware by purchasing products from Adafruit!
-
-
-Version 1.3
-=================
-
-• Initial release
+More info at: 
+http://simsalapim.github.io/chordiopages/about.html
