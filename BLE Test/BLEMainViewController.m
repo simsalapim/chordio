@@ -21,25 +21,25 @@ int string1[3]={0,0,0};
 int string2[3]={0,0,0};
 int string3[3]={0,0,0};
 
+AVAudioPlayer *basetone0[10];
 AVAudioPlayer *tone00[10];
 AVAudioPlayer *tone01[10];
 AVAudioPlayer *tone02[10];
-AVAudioPlayer *tone03[10];
 
+AVAudioPlayer *basetone1[10];
 AVAudioPlayer *tone10[10];
 AVAudioPlayer *tone11[10];
 AVAudioPlayer *tone12[10];
-AVAudioPlayer *tone13[10];
 
+AVAudioPlayer *basetone2[10];
 AVAudioPlayer *tone20[10];
 AVAudioPlayer *tone21[10];
 AVAudioPlayer *tone22[10];
-AVAudioPlayer *tone23[10];
 
+AVAudioPlayer *basetone3[10];
 AVAudioPlayer *tone30[10];
 AVAudioPlayer *tone31[10];
 AVAudioPlayer *tone32[10];
-AVAudioPlayer *tone33[10];
 
 int _currentChannel=0;
 
@@ -56,30 +56,40 @@ int _currentChannel=0;
 
 //Keep track of when buttons are being held down
 - (IBAction)buttonDown:(UIButton *)sender {
-    NSLog(@"buttonDown: %d", sender.tag);
-    if(sender.tag==0||sender.tag==1||sender.tag==2||sender.tag==3){
-        string0[0]=1;
+    NSLog(@"buttonDown: %d",sender.tag);
+    if(sender.tag==0||sender.tag==10||sender.tag==20){
+        string0[sender.tag/10]=1;
     }
-    if(sender.tag==10||sender.tag==11||sender.tag==12||sender.tag==13){
-        string0[1]=1;
+    if(sender.tag==1||sender.tag==11||sender.tag==21){
+        string1[(sender.tag-1)/10]=1;
     }
-    if(sender.tag==20||sender.tag==21||sender.tag==22||sender.tag==23){
-        string0[2]=1;
+    if(sender.tag==2||sender.tag==12||sender.tag==22){
+        string2[(sender.tag-2)/10]=1;
     }
+    if(sender.tag==3||sender.tag==13||sender.tag==23){
+        string3[(sender.tag-3)/10]=1;
+    }
+
 
 }
 
-//... and when they are released 
+//... and when they are released
 - (IBAction)buttonUp:(UIButton *)sender {
-    NSLog(@"buttonUp: %d", sender.tag);
-    if(sender.tag==0||sender.tag==1||sender.tag==2||sender.tag==3){
-        string0[0]=0;
+    NSLog(@"buttonUp: %d",sender.tag);
+
+    if(sender.tag==0||sender.tag==10||sender.tag==20){
+        string0[sender.tag/10]=0;
     }
-    if(sender.tag==4||sender.tag==5||sender.tag==6||sender.tag==7){
-        string0[1]=0;
+    if(sender.tag==1||sender.tag==11||sender.tag==21){
+        string1[(sender.tag-1)/10]=0;
+
     }
-    if(sender.tag==8||sender.tag==9||sender.tag==10||sender.tag==11){
-        string0[2]=0;
+    if(sender.tag==2||sender.tag==12||sender.tag==22){
+        string2[(sender.tag-2)/10]=0;
+
+    }
+    if(sender.tag==3||sender.tag==13||sender.tag==23){
+        string3[(sender.tag-3)/10]=0;
     }
     
     
@@ -106,79 +116,79 @@ int _currentChannel=0;
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    NSURL *url00 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *basetone0Url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                          pathForResource:@"string00"
                                          ofType:@"wav"]];
-    NSURL *url01 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url00 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                           pathForResource:@"string01"
                                           ofType:@"wav"]];
-    NSURL *url02 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url01 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                           pathForResource:@"string02"
                                           ofType:@"wav"]];
-    NSURL *url03 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url02 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                           pathForResource:@"string03"
                                           ofType:@"wav"]];
     
-    NSURL *url10 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *basetone1Url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                           pathForResource:@"string10"
                                           ofType:@"wav"]];
-    NSURL *url11 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url10 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                           pathForResource:@"string11"
                                           ofType:@"wav"]];
-    NSURL *url12 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url11 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                           pathForResource:@"string12"
                                           ofType:@"wav"]];
-    NSURL *url13 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url12 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                           pathForResource:@"string13"
                                           ofType:@"wav"]];
 
-    NSURL *url20 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *basetone2Url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                            pathForResource:@"string20"
                                            ofType:@"wav"]];
-    NSURL *url21 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url20 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                            pathForResource:@"string21"
                                            ofType:@"wav"]];
-    NSURL *url22 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url21 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                            pathForResource:@"string22"
                                            ofType:@"wav"]];
-    NSURL *url23 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url22 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                            pathForResource:@"string23"
                                            ofType:@"wav"]];
     
-    NSURL *url30 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *basetone3Url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                            pathForResource:@"string30"
                                            ofType:@"wav"]];
-    NSURL *url31 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url30 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                            pathForResource:@"string31"
                                            ofType:@"wav"]];
-    NSURL *url32 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url31 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                            pathForResource:@"string32"
                                            ofType:@"wav"]];
-    NSURL *url33 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+    NSURL *url32 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                            pathForResource:@"string33"
                                            ofType:@"wav"]];
 
     NSError *error;
     for(int i=0;i<10;i++){
+        basetone0[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:basetone0Url error:&error];
         tone00[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url00 error:&error];
         tone01[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url01 error:&error];
         tone02[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url02 error:&error];
-        tone03[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url03 error:&error];
 
+        basetone1[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:basetone1Url error:&error];
         tone10[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url10 error:&error];
         tone11[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url11 error:&error];
         tone12[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url12 error:&error];
-        tone13[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url13 error:&error];
 
+        basetone2[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:basetone2Url error:&error];
         tone20[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url20 error:&error];
         tone21[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url21 error:&error];
         tone22[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url22 error:&error];
-        tone23[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url23 error:&error];
 
+        basetone3[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:basetone3Url error:&error];
         tone30[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url30 error:&error];
         tone31[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url31 error:&error];
         tone32[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url32 error:&error];
-        tone33[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url33 error:&error];
 
     }
 
@@ -459,40 +469,48 @@ int _currentChannel=0;
             _currentChannel = 0;
         }
         if([stringNumber isEqual:@"<00>"]){
-            NSLog(@"it's zero bro");
+            NSLog(@"string 0 played");
+            
                 if(string0[0]==1){
-                    [tone01[_currentChannel] play];
+                    NSLog(@"tone01 should play");
+                    [tone00[_currentChannel] play];
                 }
                 else if(string0[1]==1){
-                    [tone02[_currentChannel] play];
+                    NSLog(@"tone02 should play");
+
+                    [tone01[_currentChannel] play];
                 
                 }
                 else if(string0[2]==1){
-                    [tone03[_currentChannel] play];
+                    NSLog(@"tone03 should play");
+
+                    [tone02[_currentChannel] play];
 
                 }
                 else{
-                    [tone00[_currentChannel] play];
+                    NSLog(@"base tone should play");
+
+                    [basetone0[_currentChannel] play];
 
                 }
             
         }
         
         else if([stringNumber isEqual:@"<01>"]&&string1!=nil){
-            NSLog(@"it's 1 bro");
+            NSLog(@"string 1 played");
             if(string1[0]==1){
-                [tone11[_currentChannel] play];
+                [tone10[_currentChannel] play];
             }
             else if(string1[1]==1){
-                [tone12[_currentChannel] play];
+                [tone11[_currentChannel] play];
                 
             }
             else if(string1[2]==1){
-                [tone13[_currentChannel] play];
+                [tone12[_currentChannel] play];
                 
             }
             else{
-                [tone10[_currentChannel] play];
+                [basetone1[_currentChannel] play];
                 
             }
             
@@ -502,40 +520,40 @@ int _currentChannel=0;
         
         else if([stringNumber isEqual:@"<02>"]){
 
-            NSLog(@"it's 2 bro");
+            NSLog(@"string 2 played");
             if(string2[0]==1){
-                [tone21[_currentChannel] play];
+                [tone20[_currentChannel] play];
             }
             else if(string2[1]==1){
-                [tone22[_currentChannel] play];
+                [tone21[_currentChannel] play];
                 
             }
             else if(string2[2]==1){
-                [tone23[_currentChannel] play];
+                [tone22[_currentChannel] play];
                 
             }
             else{
-                [tone20[_currentChannel] play];
+                [basetone2[_currentChannel] play];
                 
             }
 
             
         }
         else if([stringNumber isEqual:@"<03>"]){
-            NSLog(@"it's 3 bro");
+            NSLog(@"string 3 played");
             if(string3[0]==1){
-                [tone31[_currentChannel] play];
+                [tone30[_currentChannel] play];
             }
             else if(string3[1]==1){
-                [tone32[_currentChannel] play];
+                [tone31[_currentChannel] play];
                 
             }
             else if(string3[2]==1){
-                [tone33[_currentChannel] play];
+                [tone32[_currentChannel] play];
                 
             }
             else{
-                [tone30[_currentChannel] play];
+                [basetone3[_currentChannel] play];
                 
             }
             }
@@ -616,17 +634,6 @@ int _currentChannel=0;
     
 }
 
-//- (IBAction)onButtonHeldDown:(UIButton *)sender {
-//    UIButton *resultButton = (UIButton *)sender;
-//    NSLog(@" The button's title is %@." resultButton.currentTitle);
-//}
-//
-////- (IBAction)onButtonHeldDown:(id)sender {
-//   // NSLog(@"Did tap button %@", id);
-////}
-//- (IBAction)touchDownOnButton:(UIButton *)sender {
-//    NSLog(@"Did tap button %d", (int)[self.tones indexOfObject:sender]);
-//}
 
 @end
 

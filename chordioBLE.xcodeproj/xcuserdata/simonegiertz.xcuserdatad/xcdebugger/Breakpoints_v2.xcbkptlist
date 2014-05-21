@@ -24,13 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BLE Test/BLEMainViewController.m"
-            timestampString = "422302884.628171"
+            timestampString = "422356908.506441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "653"
-            endingLineNumber = "653"
-            landmarkName = "@implementation BLEMainViewController"
-            landmarkType = "3">
+            startingLineNumber = "669"
+            endingLineNumber = "669">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

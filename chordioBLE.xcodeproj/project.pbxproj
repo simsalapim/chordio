@@ -8,16 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB17938519282D5E003AE952 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB17938419282D5E003AE952 /* AVFoundation.framework */; };
-		DB17939C19287F28003AE952 /* stripes1.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB17939819287F28003AE952 /* stripes1.wav */; };
-		DB17939D19287F28003AE952 /* stripes2.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB17939919287F28003AE952 /* stripes2.wav */; };
-		DB17939E19287F28003AE952 /* stripes3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB17939A19287F28003AE952 /* stripes3.wav */; };
-		DB1793A5192881A8003AE952 /* stripes4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793A4192881A8003AE952 /* stripes4.wav */; };
 		DB1793DA1928903E003AE952 /* string00.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793C61928903E003AE952 /* string00.wav */; };
-		DB1793EA1928903E003AE952 /* stripes1.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793D61928903E003AE952 /* stripes1.wav */; };
-		DB1793EB1928903E003AE952 /* stripes2.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793D71928903E003AE952 /* stripes2.wav */; };
-		DB1793EC1928903E003AE952 /* stripes3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793D81928903E003AE952 /* stripes3.wav */; };
-		DB1793ED1928903E003AE952 /* stripes4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793D91928903E003AE952 /* stripes4.wav */; };
-		DB1793FE19289978003AE952 /* string00.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793EE19289978003AE952 /* string00.wav */; };
 		DB1793FF19289978003AE952 /* string01.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793EF19289978003AE952 /* string01.wav */; };
 		DB17940019289978003AE952 /* string02.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F019289978003AE952 /* string02.wav */; };
 		DB17940219289978003AE952 /* string10.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793F219289978003AE952 /* string10.wav */; };
@@ -55,16 +46,7 @@
 
 /* Begin PBXFileReference section */
 		DB17938419282D5E003AE952 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		DB17939819287F28003AE952 /* stripes1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes1.wav; sourceTree = "<group>"; };
-		DB17939919287F28003AE952 /* stripes2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes2.wav; sourceTree = "<group>"; };
-		DB17939A19287F28003AE952 /* stripes3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes3.wav; sourceTree = "<group>"; };
-		DB1793A4192881A8003AE952 /* stripes4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes4.wav; sourceTree = "<group>"; };
 		DB1793C61928903E003AE952 /* string00.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string00.wav; sourceTree = "<group>"; };
-		DB1793D61928903E003AE952 /* stripes1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes1.wav; sourceTree = "<group>"; };
-		DB1793D71928903E003AE952 /* stripes2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes2.wav; sourceTree = "<group>"; };
-		DB1793D81928903E003AE952 /* stripes3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes3.wav; sourceTree = "<group>"; };
-		DB1793D91928903E003AE952 /* stripes4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stripes4.wav; sourceTree = "<group>"; };
-		DB1793EE19289978003AE952 /* string00.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string00.wav; sourceTree = "<group>"; };
 		DB1793EF19289978003AE952 /* string01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string01.wav; sourceTree = "<group>"; };
 		DB1793F019289978003AE952 /* string02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string02.wav; sourceTree = "<group>"; };
 		DB1793F219289978003AE952 /* string10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string10.wav; sourceTree = "<group>"; };
@@ -132,10 +114,7 @@
 		DB17938619282DFC003AE952 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				DB17939819287F28003AE952 /* stripes1.wav */,
-				DB17939919287F28003AE952 /* stripes2.wav */,
 				DB1793C61928903E003AE952 /* string00.wav */,
-				DB1793EE19289978003AE952 /* string00.wav */,
 				DB1793EF19289978003AE952 /* string01.wav */,
 				DB1793F019289978003AE952 /* string02.wav */,
 				DB17940E192899FD003AE952 /* string03.wav */,
@@ -151,12 +130,6 @@
 				DB1793FB19289978003AE952 /* string31.wav */,
 				DB1793FC19289978003AE952 /* string32.wav */,
 				DB1793FD19289978003AE952 /* string33.wav */,
-				DB1793D61928903E003AE952 /* stripes1.wav */,
-				DB1793D71928903E003AE952 /* stripes2.wav */,
-				DB1793D81928903E003AE952 /* stripes3.wav */,
-				DB1793D91928903E003AE952 /* stripes4.wav */,
-				DB1793A4192881A8003AE952 /* stripes4.wav */,
-				DB17939A19287F28003AE952 /* stripes3.wav */,
 			);
 			path = sounds;
 			sourceTree = "<group>";
@@ -305,30 +278,21 @@
 			files = (
 				DB1793FF19289978003AE952 /* string01.wav in Resources */,
 				DB17940B19289978003AE952 /* string31.wav in Resources */,
-				DB17939D19287F28003AE952 /* stripes2.wav in Resources */,
 				F0A2C97416BBE44500F2FD12 /* InfoPlist.strings in Resources */,
-				DB1793EC1928903E003AE952 /* stripes3.wav in Resources */,
-				DB1793A5192881A8003AE952 /* stripes4.wav in Resources */,
 				DB17940F192899FD003AE952 /* string03.wav in Resources */,
 				DB17940A19289978003AE952 /* string30.wav in Resources */,
 				DB17940619289978003AE952 /* string20.wav in Resources */,
 				DB17940D19289978003AE952 /* string33.wav in Resources */,
-				DB1793EA1928903E003AE952 /* stripes1.wav in Resources */,
 				DB17940719289978003AE952 /* string21.wav in Resources */,
 				DB17940019289978003AE952 /* string02.wav in Resources */,
 				F05E7E0318BEF399005E25F6 /* Images.xcassets in Resources */,
-				DB1793ED1928903E003AE952 /* stripes4.wav in Resources */,
 				DB17940919289978003AE952 /* string23.wav in Resources */,
 				DB17940C19289978003AE952 /* string32.wav in Resources */,
 				DB17940419289978003AE952 /* string12.wav in Resources */,
 				DB17940519289978003AE952 /* string13.wav in Resources */,
 				DB59392F1927A1BE003E94B8 /* BLEMainViewController_iPhone.xib in Resources */,
-				DB17939E19287F28003AE952 /* stripes3.wav in Resources */,
 				DB17940219289978003AE952 /* string10.wav in Resources */,
-				DB1793FE19289978003AE952 /* string00.wav in Resources */,
-				DB1793EB1928903E003AE952 /* stripes2.wav in Resources */,
 				DB17940319289978003AE952 /* string11.wav in Resources */,
-				DB17939C19287F28003AE952 /* stripes1.wav in Resources */,
 				DB17940819289978003AE952 /* string22.wav in Resources */,
 				DB1793DA1928903E003AE952 /* string00.wav in Resources */,
 			);
