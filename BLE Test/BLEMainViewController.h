@@ -12,6 +12,7 @@
 #import <CoreAudio/CoreAudioTypes.h>
 
 @interface BLEMainViewController : UIViewController <UINavigationControllerDelegate, CBCentralManagerDelegate, UARTPeripheralDelegate, AVAudioPlayerDelegate>
+
 typedef enum {
     ConnectionModeNone  = 0,
     ConnectionModePinIO,

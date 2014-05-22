@@ -25,9 +25,25 @@
 		DB17940D19289978003AE952 /* string33.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB1793FD19289978003AE952 /* string33.wav */; };
 		DB17940F192899FD003AE952 /* string03.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB17940E192899FD003AE952 /* string03.wav */; };
 		DB191BEC192CC8FA00E392A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB191BEB192CC8FA00E392A8 /* Images.xcassets */; };
+		DB191BF3192D331A00E392A8 /* BLEMainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB191BF1192D331A00E392A8 /* BLEMainViewController_iPhone.xib */; };
+		DB191BF8192DF4D000E392A8 /* tone-0.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191BF4192DF4D000E392A8 /* tone-0.wav */; };
+		DB191BF9192DF4D000E392A8 /* tone-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191BF5192DF4D000E392A8 /* tone-1.wav */; };
+		DB191BFA192DF4D000E392A8 /* tone-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191BF6192DF4D000E392A8 /* tone-2.wav */; };
+		DB191BFB192DF4D000E392A8 /* tone-3.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191BF7192DF4D000E392A8 /* tone-3.wav */; };
+		DB191C08192E35EC00E392A8 /* tone-4.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191BFC192E35EC00E392A8 /* tone-4.wav */; };
+		DB191C09192E35EC00E392A8 /* tone-5.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191BFD192E35EC00E392A8 /* tone-5.wav */; };
+		DB191C0A192E35EC00E392A8 /* tone-6.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191BFE192E35EC00E392A8 /* tone-6.wav */; };
+		DB191C0B192E35EC00E392A8 /* tone-7.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191BFF192E35EC00E392A8 /* tone-7.wav */; };
+		DB191C0C192E35EC00E392A8 /* tone-8.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191C00192E35EC00E392A8 /* tone-8.wav */; };
+		DB191C0D192E35EC00E392A8 /* tone-9.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191C01192E35EC00E392A8 /* tone-9.wav */; };
+		DB191C0E192E35EC00E392A8 /* tone-10.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191C02192E35EC00E392A8 /* tone-10.wav */; };
+		DB191C0F192E35EC00E392A8 /* tone-11.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191C03192E35EC00E392A8 /* tone-11.wav */; };
+		DB191C10192E35EC00E392A8 /* tone-12.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191C04192E35EC00E392A8 /* tone-12.wav */; };
+		DB191C11192E35EC00E392A8 /* tone-13.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191C05192E35EC00E392A8 /* tone-13.wav */; };
+		DB191C12192E35EC00E392A8 /* tone-14.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191C06192E35EC00E392A8 /* tone-14.wav */; };
+		DB191C13192E35EC00E392A8 /* tone-15.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB191C07192E35EC00E392A8 /* tone-15.wav */; };
 		DB34F888192829680047DFC7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB34F885192829680047DFC7 /* CoreAudio.framework */; };
 		DB34F88A19282D230047DFC7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB34F88919282D230047DFC7 /* AudioToolbox.framework */; };
-		DB59392F1927A1BE003E94B8 /* BLEMainViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5939241927A1BE003E94B8 /* BLEMainViewController_iPhone.xib */; };
 		DB5939421927B78B003E94B8 /* CBUUID+StringExtraction.m in Sources */ = {isa = PBXBuildFile; fileRef = DB59393B1927B78B003E94B8 /* CBUUID+StringExtraction.m */; };
 		DB5939431927B78B003E94B8 /* NSData+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = DB59393D1927B78B003E94B8 /* NSData+hex.m */; };
 		DB5939441927B78B003E94B8 /* NSString+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = DB59393F1927B78B003E94B8 /* NSString+hex.m */; };
@@ -62,10 +78,26 @@
 		DB1793FC19289978003AE952 /* string32.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string32.wav; sourceTree = "<group>"; };
 		DB1793FD19289978003AE952 /* string33.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string33.wav; sourceTree = "<group>"; };
 		DB17940E192899FD003AE952 /* string03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = string03.wav; sourceTree = "<group>"; };
-		DB191BEB192CC8FA00E392A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DB191BEB192CC8FA00E392A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		DB191BF2192D331A00E392A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BLEMainViewController_iPhone.xib; sourceTree = "<group>"; };
+		DB191BF4192DF4D000E392A8 /* tone-0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-0.wav"; sourceTree = "<group>"; };
+		DB191BF5192DF4D000E392A8 /* tone-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-1.wav"; sourceTree = "<group>"; };
+		DB191BF6192DF4D000E392A8 /* tone-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-2.wav"; sourceTree = "<group>"; };
+		DB191BF7192DF4D000E392A8 /* tone-3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-3.wav"; sourceTree = "<group>"; };
+		DB191BFC192E35EC00E392A8 /* tone-4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-4.wav"; sourceTree = "<group>"; };
+		DB191BFD192E35EC00E392A8 /* tone-5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-5.wav"; sourceTree = "<group>"; };
+		DB191BFE192E35EC00E392A8 /* tone-6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-6.wav"; sourceTree = "<group>"; };
+		DB191BFF192E35EC00E392A8 /* tone-7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-7.wav"; sourceTree = "<group>"; };
+		DB191C00192E35EC00E392A8 /* tone-8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-8.wav"; sourceTree = "<group>"; };
+		DB191C01192E35EC00E392A8 /* tone-9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-9.wav"; sourceTree = "<group>"; };
+		DB191C02192E35EC00E392A8 /* tone-10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-10.wav"; sourceTree = "<group>"; };
+		DB191C03192E35EC00E392A8 /* tone-11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-11.wav"; sourceTree = "<group>"; };
+		DB191C04192E35EC00E392A8 /* tone-12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-12.wav"; sourceTree = "<group>"; };
+		DB191C05192E35EC00E392A8 /* tone-13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-13.wav"; sourceTree = "<group>"; };
+		DB191C06192E35EC00E392A8 /* tone-14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-14.wav"; sourceTree = "<group>"; };
+		DB191C07192E35EC00E392A8 /* tone-15.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "tone-15.wav"; sourceTree = "<group>"; };
 		DB34F885192829680047DFC7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		DB34F88919282D230047DFC7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		DB5939251927A1BE003E94B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BLEMainViewController_iPhone.xib; sourceTree = "<group>"; };
 		DB59393A1927B78B003E94B8 /* CBUUID+StringExtraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CBUUID+StringExtraction.h"; path = "../../Bluefruit_LE_Connect-master/BLE Test/CBUUID+StringExtraction.h"; sourceTree = "<group>"; };
 		DB59393B1927B78B003E94B8 /* CBUUID+StringExtraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CBUUID+StringExtraction.m"; path = "../../Bluefruit_LE_Connect-master/BLE Test/CBUUID+StringExtraction.m"; sourceTree = "<group>"; };
 		DB59393C1927B78B003E94B8 /* NSData+hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+hex.h"; path = "../../Bluefruit_LE_Connect-master/BLE Test/NSData+hex.h"; sourceTree = "<group>"; };
@@ -75,8 +107,8 @@
 		DB5939401927B78B003E94B8 /* UITextView+lineCount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITextView+lineCount.h"; path = "../../Bluefruit_LE_Connect-master/BLE Test/UITextView+lineCount.h"; sourceTree = "<group>"; };
 		DB5939411927B78B003E94B8 /* UITextView+lineCount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITextView+lineCount.m"; path = "../../Bluefruit_LE_Connect-master/BLE Test/UITextView+lineCount.m"; sourceTree = "<group>"; };
 		DB5939461927BC9A003E94B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F08CE40F188FD0C10098A4BD /* UARTPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UARTPeripheral.h; sourceTree = "<group>"; };
-		F08CE410188FD0C10098A4BD /* UARTPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UARTPeripheral.m; sourceTree = "<group>"; };
+		F08CE40F188FD0C10098A4BD /* UARTPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UARTPeripheral.h; path = "../chordioBLE/BLE Test/UARTPeripheral.h"; sourceTree = "<group>"; };
+		F08CE410188FD0C10098A4BD /* UARTPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UARTPeripheral.m; path = "../chordioBLE/BLE Test/UARTPeripheral.m"; sourceTree = "<group>"; };
 		F0A2C96616BBE44500F2FD12 /* BluetoothLE Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BluetoothLE Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A2C96B16BBE44500F2FD12 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F0A2C96D16BBE44500F2FD12 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,8 +116,8 @@
 		F0A2C97316BBE44500F2FD12 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F0A2C97516BBE44500F2FD12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0A2C97716BBE44500F2FD12 /* BluetoothLE Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BluetoothLE Test-Prefix.pch"; sourceTree = "<group>"; };
-		F0A2C97816BBE44500F2FD12 /* BLEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEAppDelegate.h; sourceTree = "<group>"; };
-		F0A2C97916BBE44500F2FD12 /* BLEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEAppDelegate.m; sourceTree = "<group>"; };
+		F0A2C97816BBE44500F2FD12 /* BLEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BLEAppDelegate.h; path = "../chordioBLE/BLE Test/BLEAppDelegate.h"; sourceTree = "<group>"; };
+		F0A2C97916BBE44500F2FD12 /* BLEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BLEAppDelegate.m; path = "../chordioBLE/BLE Test/BLEAppDelegate.m"; sourceTree = "<group>"; };
 		F0A2C98116BBE44500F2FD12 /* BLEMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEMainViewController.h; sourceTree = "<group>"; };
 		F0A2C98216BBE44500F2FD12 /* BLEMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEMainViewController.m; sourceTree = "<group>"; };
 		F0A2C99C16BBED8E00F2FD12 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -130,8 +162,36 @@
 				DB1793FB19289978003AE952 /* string31.wav */,
 				DB1793FC19289978003AE952 /* string32.wav */,
 				DB1793FD19289978003AE952 /* string33.wav */,
+				DB191BF4192DF4D000E392A8 /* tone-0.wav */,
+				DB191BF5192DF4D000E392A8 /* tone-1.wav */,
+				DB191BF6192DF4D000E392A8 /* tone-2.wav */,
+				DB191BF7192DF4D000E392A8 /* tone-3.wav */,
+				DB191BFC192E35EC00E392A8 /* tone-4.wav */,
+				DB191BFD192E35EC00E392A8 /* tone-5.wav */,
+				DB191BFE192E35EC00E392A8 /* tone-6.wav */,
+				DB191BFF192E35EC00E392A8 /* tone-7.wav */,
+				DB191C00192E35EC00E392A8 /* tone-8.wav */,
+				DB191C01192E35EC00E392A8 /* tone-9.wav */,
+				DB191C02192E35EC00E392A8 /* tone-10.wav */,
+				DB191C03192E35EC00E392A8 /* tone-11.wav */,
+				DB191C04192E35EC00E392A8 /* tone-12.wav */,
+				DB191C05192E35EC00E392A8 /* tone-13.wav */,
+				DB191C06192E35EC00E392A8 /* tone-14.wav */,
+				DB191C07192E35EC00E392A8 /* tone-15.wav */,
 			);
 			path = sounds;
+			sourceTree = "<group>";
+		};
+		DB191BED192CCF3700E392A8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F08CE40F188FD0C10098A4BD /* UARTPeripheral.h */,
+				F08CE410188FD0C10098A4BD /* UARTPeripheral.m */,
+				F0A2C97816BBE44500F2FD12 /* BLEAppDelegate.h */,
+				F0A2C97916BBE44500F2FD12 /* BLEAppDelegate.m */,
+			);
+			name = Application;
+			path = ../../Application;
 			sourceTree = "<group>";
 		};
 		F08BFF4618A4F7C400EF43FB /* Categories */ = {
@@ -149,19 +209,20 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		F08BFF4718A4F7E600EF43FB /* UI */ = {
+		F08BFF4718A4F7E600EF43FB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DB5939241927A1BE003E94B8 /* BLEMainViewController_iPhone.xib */,
+				F0A2C98116BBE44500F2FD12 /* BLEMainViewController.h */,
+				DB191BF1192D331A00E392A8 /* BLEMainViewController_iPhone.xib */,
+				F0A2C98216BBE44500F2FD12 /* BLEMainViewController.m */,
 			);
-			name = UI;
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		F0A2C95D16BBE44500F2FD12 = {
 			isa = PBXGroup;
 			children = (
-				DB191BEB192CC8FA00E392A8 /* Images.xcassets */,
-				F0A2C96F16BBE44500F2FD12 /* Classes */,
+				F0A2C96F16BBE44500F2FD12 /* UICatalog */,
 				F0A2C96816BBE44500F2FD12 /* Frameworks */,
 				F0A2C96716BBE44500F2FD12 /* Products */,
 			);
@@ -190,21 +251,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F0A2C96F16BBE44500F2FD12 /* Classes */ = {
+		F0A2C96F16BBE44500F2FD12 /* UICatalog */ = {
 			isa = PBXGroup;
 			children = (
-				F08BFF4618A4F7C400EF43FB /* Categories */,
-				F0A2C97016BBE44500F2FD12 /* Supporting Files */,
-				F08BFF4718A4F7E600EF43FB /* UI */,
-				F0A2C97816BBE44500F2FD12 /* BLEAppDelegate.h */,
-				F0A2C97916BBE44500F2FD12 /* BLEAppDelegate.m */,
+				F08BFF4718A4F7E600EF43FB /* View Controllers */,
+				DB191BED192CCF3700E392A8 /* Application */,
 				DB17938619282DFC003AE952 /* sounds */,
-				F0A2C98116BBE44500F2FD12 /* BLEMainViewController.h */,
-				F0A2C98216BBE44500F2FD12 /* BLEMainViewController.m */,
-				F08CE40F188FD0C10098A4BD /* UARTPeripheral.h */,
-				F08CE410188FD0C10098A4BD /* UARTPeripheral.m */,
+				DB191BEB192CC8FA00E392A8 /* Images.xcassets */,
+				F0A2C97016BBE44500F2FD12 /* Supporting Files */,
+				F08BFF4618A4F7C400EF43FB /* Categories */,
 			);
-			name = Classes;
+			name = UICatalog;
 			path = "BLE Test";
 			sourceTree = "<group>";
 		};
@@ -277,22 +334,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1793FF19289978003AE952 /* string01.wav in Resources */,
+				DB191C0B192E35EC00E392A8 /* tone-7.wav in Resources */,
 				DB191BEC192CC8FA00E392A8 /* Images.xcassets in Resources */,
 				DB17940B19289978003AE952 /* string31.wav in Resources */,
 				F0A2C97416BBE44500F2FD12 /* InfoPlist.strings in Resources */,
+				DB191C0D192E35EC00E392A8 /* tone-9.wav in Resources */,
 				DB17940F192899FD003AE952 /* string03.wav in Resources */,
+				DB191BF8192DF4D000E392A8 /* tone-0.wav in Resources */,
 				DB17940A19289978003AE952 /* string30.wav in Resources */,
+				DB191BFB192DF4D000E392A8 /* tone-3.wav in Resources */,
 				DB17940619289978003AE952 /* string20.wav in Resources */,
 				DB17940D19289978003AE952 /* string33.wav in Resources */,
+				DB191C11192E35EC00E392A8 /* tone-13.wav in Resources */,
+				DB191C09192E35EC00E392A8 /* tone-5.wav in Resources */,
+				DB191C10192E35EC00E392A8 /* tone-12.wav in Resources */,
+				DB191C0A192E35EC00E392A8 /* tone-6.wav in Resources */,
+				DB191C0C192E35EC00E392A8 /* tone-8.wav in Resources */,
+				DB191BF3192D331A00E392A8 /* BLEMainViewController_iPhone.xib in Resources */,
+				DB191C0F192E35EC00E392A8 /* tone-11.wav in Resources */,
 				DB17940719289978003AE952 /* string21.wav in Resources */,
 				DB17940019289978003AE952 /* string02.wav in Resources */,
+				DB191C08192E35EC00E392A8 /* tone-4.wav in Resources */,
 				DB17940919289978003AE952 /* string23.wav in Resources */,
+				DB191BF9192DF4D000E392A8 /* tone-1.wav in Resources */,
+				DB191C0E192E35EC00E392A8 /* tone-10.wav in Resources */,
 				DB17940C19289978003AE952 /* string32.wav in Resources */,
+				DB191C13192E35EC00E392A8 /* tone-15.wav in Resources */,
 				DB17940419289978003AE952 /* string12.wav in Resources */,
 				DB17940519289978003AE952 /* string13.wav in Resources */,
-				DB59392F1927A1BE003E94B8 /* BLEMainViewController_iPhone.xib in Resources */,
+				DB191BFA192DF4D000E392A8 /* tone-2.wav in Resources */,
 				DB17940219289978003AE952 /* string10.wav in Resources */,
 				DB17940319289978003AE952 /* string11.wav in Resources */,
+				DB191C12192E35EC00E392A8 /* tone-14.wav in Resources */,
 				DB17940819289978003AE952 /* string22.wav in Resources */,
 				DB1793DA1928903E003AE952 /* string00.wav in Resources */,
 			);
@@ -319,10 +392,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DB5939241927A1BE003E94B8 /* BLEMainViewController_iPhone.xib */ = {
+		DB191BF1192D331A00E392A8 /* BLEMainViewController_iPhone.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB5939251927A1BE003E94B8 /* en */,
+				DB191BF2192D331A00E392A8 /* en */,
 			);
 			name = BLEMainViewController_iPhone.xib;
 			sourceTree = "<group>";

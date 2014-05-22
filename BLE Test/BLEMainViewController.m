@@ -16,84 +16,52 @@
 #define DISCONNECT_TEXT @"Disconnect"
 #define CONNECT_TEXT @"Connect"
 
-int string0[3]={0,0,0};
-int string1[3]={0,0,0};
-int string2[3]={0,0,0};
-int string3[3]={0,0,0};
+AVAudioPlayer *tone[10];
 
-AVAudioPlayer *basetone0[10];
-AVAudioPlayer *tone00[10];
-AVAudioPlayer *tone01[10];
-AVAudioPlayer *tone02[10];
+int amountOfFrets=3;
+int amountOfStrings=4;
+int amountOfTones=16;
 
-AVAudioPlayer *basetone1[10];
-AVAudioPlayer *tone10[10];
-AVAudioPlayer *tone11[10];
-AVAudioPlayer *tone12[10];
+int _currentChannelBaseToneString0=0;
+int _currentChannelBaseToneString1=0;
+int _currentChannelBaseToneString2=0;
+int _currentChannelBaseToneString3=0;
 
-AVAudioPlayer *basetone2[10];
-AVAudioPlayer *tone20[10];
-AVAudioPlayer *tone21[10];
-AVAudioPlayer *tone22[10];
-
-AVAudioPlayer *basetone3[10];
-AVAudioPlayer *tone30[10];
-AVAudioPlayer *tone31[10];
-AVAudioPlayer *tone32[10];
-
-int _currentChannel=0;
+//Used when creating string buttons
+int _currentHeightString0=0;
+int _currentHeightString1=0;
+int _currentHeightString2=0;
+int _currentHeightString3=0;
 
 @interface BLEMainViewController ()<UIAlertViewDelegate>{
+
+    NSMutableArray *string0;
+    NSMutableArray *string1;
+    NSMutableArray *string2;
+    NSMutableArray *string3;
+    
+    NSMutableArray *tonesOfString0;
+    NSMutableArray *tonesOfString1;
+    NSMutableArray *tonesOfString2;
+    NSMutableArray *tonesOfString3;
+    NSMutableArray *tonesOfStringInner;
+
     
     CBCentralManager    *cm;
     UIAlertView         *currentAlertView;
     UARTPeripheral      *currentPeripheral;
+
 }
+
+@property(nonatomic,retain) IBOutlet UIScrollView *scrollview;
+
 
 @end
 
+
+
 @implementation BLEMainViewController
 
-//Keep track of when buttons are being held down
-- (IBAction)buttonDown:(UIButton *)sender {
-    NSLog(@"buttonDown: %d",sender.tag);
-    if(sender.tag==0||sender.tag==10||sender.tag==20){
-        string0[sender.tag/10]=1;
-    }
-    if(sender.tag==1||sender.tag==11||sender.tag==21){
-        string1[(sender.tag-1)/10]=1;
-    }
-    if(sender.tag==2||sender.tag==12||sender.tag==22){
-        string2[(sender.tag-2)/10]=1;
-    }
-    if(sender.tag==3||sender.tag==13||sender.tag==23){
-        string3[(sender.tag-3)/10]=1;
-    }
-
-
-}
-
-//... and when they are released
-- (IBAction)buttonUp:(UIButton *)sender {
-    NSLog(@"buttonUp: %d",sender.tag);
-
-    if(sender.tag==0||sender.tag==10||sender.tag==20){
-        string0[sender.tag/10]=0;
-    }
-    if(sender.tag==1||sender.tag==11||sender.tag==21){
-        string1[(sender.tag-1)/10]=0;
-
-    }
-    if(sender.tag==2||sender.tag==12||sender.tag==22){
-        string2[(sender.tag-2)/10]=0;
-
-    }
-    if(sender.tag==3||sender.tag==13||sender.tag==23){
-        string3[(sender.tag-3)/10]=0;
-    }
-    
-    
-}
 
 #pragma mark - View Lifecycle
 
@@ -116,92 +84,98 @@ int _currentChannel=0;
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    NSURL *basetone0Url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                         pathForResource:@"string00"
-                                         ofType:@"wav"]];
-    NSURL *url00 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                          pathForResource:@"string01"
-                                          ofType:@"wav"]];
-    NSURL *url01 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                          pathForResource:@"string02"
-                                          ofType:@"wav"]];
-    NSURL *url02 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                          pathForResource:@"string03"
-                                          ofType:@"wav"]];
+    string0=[[NSMutableArray alloc] init];
+    string1=[[NSMutableArray alloc] init];
+    string2=[[NSMutableArray alloc] init];
+    string3=[[NSMutableArray alloc] init];
     
-    NSURL *basetone1Url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                          pathForResource:@"string10"
-                                          ofType:@"wav"]];
-    NSURL *url10 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                          pathForResource:@"string11"
-                                          ofType:@"wav"]];
-    NSURL *url11 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                          pathForResource:@"string12"
-                                          ofType:@"wav"]];
-    NSURL *url12 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                          pathForResource:@"string13"
-                                          ofType:@"wav"]];
-
-    NSURL *basetone2Url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                           pathForResource:@"string20"
-                                           ofType:@"wav"]];
-    NSURL *url20 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                           pathForResource:@"string21"
-                                           ofType:@"wav"]];
-    NSURL *url21 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                           pathForResource:@"string22"
-                                           ofType:@"wav"]];
-    NSURL *url22 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                           pathForResource:@"string23"
-                                           ofType:@"wav"]];
+    tonesOfString0=[[NSMutableArray alloc] init];
+    tonesOfString1=[[NSMutableArray alloc] init];
+    tonesOfString2=[[NSMutableArray alloc] init];
+    tonesOfString3=[[NSMutableArray alloc] init];
+    //create the buttons
+    for (int i=0; i<amountOfTones; i++){
+        //create buttons
+        UIButton *button= [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        //Attach events
+        [button addTarget:self action:@selector(buttonDown:) forControlEvents:(UIControlEventTouchDown)];
+        [button addTarget:self action:@selector(buttonUp:) forControlEvents:(UIControlEventTouchUpInside)];
+        [button addTarget:self action:@selector(buttonUp:) forControlEvents:(UIControlEventTouchUpOutside)];
+        [button setBackgroundColor:( [UIColor grayColor])];
+        
+        //Generate tones
+        tonesOfStringInner=[[NSMutableArray alloc] init];
+        NSString *toneName =[NSString stringWithFormat:@"tone-%d",i];
+        NSURL *toneURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:toneName
+                                                 ofType:@"wav"]];
+        NSError *error;
+        for (int h=0; h<10; h++) {
+            tone[h] = [[AVAudioPlayer alloc] initWithContentsOfURL:toneURL error:&error];
+            [tonesOfStringInner addObject:tone[h]];
+            
+        }
+        
+        if (error)
+        {
+            NSLog(@"Error in audioPlayer: %@",
+                  [error localizedDescription]);
+        } else {
+            tone[0].delegate = self;
+            [tone[0] prepareToPlay];
+            
+            //first string
+            if(i<amountOfTones/4){
+                
+                [tonesOfString0 addObject:tonesOfStringInner];
+                //Set tags to 0,10,20,30 ...
+                [button setTag:i*10];
+                [button setFrame:CGRectMake(20, _currentHeightString0, 30, 180/pow(1.059263,i))];
+                _currentHeightString0=_currentHeightString0+10+180/pow(1.059263,i);
+                button.selected=false;
+                [string0 addObject:button];
+                
+            }
+            //second string
+            else if(i>=amountOfTones/4&&i<amountOfTones/2){
+                [tonesOfString1 addObject:tonesOfStringInner];
+                
+                //Set tags to 1,11,21,31 ...
+                [button setTag:(i-amountOfTones/4)*10+1];
+                //Proportion between two nearby frets is 1:1.059263
+                [button setFrame:CGRectMake(100, _currentHeightString1, 30, 180/pow(1.059263,i-amountOfTones/4))];
+                _currentHeightString1=_currentHeightString1+10+180/pow(1.059263,i-amountOfTones/4);
+                [string1 addObject:button];
+                
+            }
+            //third string
+            else if(i>=amountOfTones/2&&i<3*amountOfTones/4){
+                [tonesOfString2 addObject:tonesOfStringInner];
+                
+                //Set tags to 2,12,22,32 ...
+                [button setTag:(i-amountOfTones/2)*10+2];
+                [button setFrame:CGRectMake(180, _currentHeightString2, 30, 180/pow(1.059263,i-amountOfTones/2))];
+                _currentHeightString2=_currentHeightString2+10+180/pow(1.059263,i-amountOfTones/2);
+                [string2 addObject:button];
+                
+            }
+            //fourth string
+            else{
+                [tonesOfString3 addObject:tonesOfStringInner];
+                
+                //Set tags to 3,13,23,33 ...
+                [button setTag:(i-3*amountOfTones/4)*10+3];
+                [button setFrame:CGRectMake(260, _currentHeightString3, 30, 180/pow(1.059263,i-3*amountOfTones/4))];
+                _currentHeightString3=_currentHeightString3+10+180/pow(1.059263,i-3*amountOfTones/4);
+                [string3 addObject:button];
+                
+            }
+        }
+        
+        [self.view addSubview:button];
+    };
     
-    NSURL *basetone3Url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                           pathForResource:@"string30"
-                                           ofType:@"wav"]];
-    NSURL *url30 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                           pathForResource:@"string31"
-                                           ofType:@"wav"]];
-    NSURL *url31 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                           pathForResource:@"string32"
-                                           ofType:@"wav"]];
-    NSURL *url32 = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                           pathForResource:@"string33"
-                                           ofType:@"wav"]];
-
-    NSError *error;
-    for(int i=0;i<10;i++){
-        basetone0[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:basetone0Url error:&error];
-        tone00[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url00 error:&error];
-        tone01[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url01 error:&error];
-        tone02[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url02 error:&error];
-
-        basetone1[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:basetone1Url error:&error];
-        tone10[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url10 error:&error];
-        tone11[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url11 error:&error];
-        tone12[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url12 error:&error];
-
-        basetone2[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:basetone2Url error:&error];
-        tone20[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url20 error:&error];
-        tone21[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url21 error:&error];
-        tone22[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url22 error:&error];
-
-        basetone3[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:basetone3Url error:&error];
-        tone30[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url30 error:&error];
-        tone31[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url31 error:&error];
-        tone32[i] = [[AVAudioPlayer alloc] initWithContentsOfURL:url32 error:&error];
-
-    }
-
-
-    if (error)
-    {
-        NSLog(@"Error in audioPlayer: %@",
-              [error localizedDescription]);
-    } else {
-        _audioPlayer.delegate = self;
-        [_audioPlayer prepareToPlay];
-
-    }
+    //Load the tones and put the players in an array correlating to what string the tone should be on
     
     [self.view setAutoresizesSubviews:YES];
 	
@@ -225,6 +199,19 @@ int _currentChannel=0;
 
 }
 
+//Call when buttons are pressed
+- (IBAction)buttonDown:(UIButton *)sender {
+    int tag=sender.tag;
+    NSLog(@"buttonDown: %d",tag);
+    sender.selected=TRUE;
+    
+}
+
+//... and when they are released
+- (IBAction)buttonUp:(UIButton *)sender {
+    sender.selected=FALSE;
+    
+}
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
@@ -240,18 +227,12 @@ int _currentChannel=0;
 
 #pragma mark - Root UI
 
-
-
-
-
-
 - (IBAction)buttonTapped:(UIButton*)sender{
     
     //Called by Pin I/O or UART Monitor connect buttons
     
     
 }
-
 
 - (void)scanForPeripherals{
     
@@ -419,7 +400,7 @@ int _currentChannel=0;
     
     
     //UART mode
-
+    
     //Dismiss Alert view & update main view
     [currentAlertView dismissWithClickedButtonIndex:-1 animated:NO];
     
@@ -451,66 +432,78 @@ int _currentChannel=0;
 }
 
 
+
+//Receive data when a string has been touched
 - (void)didReceiveData:(NSData*)newData{
     
     //Data incoming from UART peripheral, forward to current view controller
-
-    //Debug
-//    NSString *hexString = [newData hexRepresentationWithSpaces:YES];
-//    NSLog(@"Received: %@", newData);
     
     if (_connectionStatus == ConnectionStatusConnected || _connectionStatus == ConnectionStatusScanning) {
-        //UART
-
+        
         //send data to UART Controller
         NSString* stringNumber = [NSString stringWithFormat:@"%@", newData];
-        _currentChannel++;
-        if (_currentChannel == 10) {
-            _currentChannel = 0;
-        }
+
+        bool baseToneShouldPlay=TRUE;
+        
         if([stringNumber isEqual:@"<00>"]){
             NSLog(@"string 0 played");
-            
-                if(string0[0]==1){
-                    NSLog(@"tone01 should play");
-                    [tone00[_currentChannel] play];
+            for (int i=string0.count-1; i>=0; i--) {
+                // NSLog(@"object from array %@", [testString2 objectAtIndex:i]);
+                UIButton *buttonOnString=[string0 objectAtIndex:i];
+                if(buttonOnString.selected ==TRUE){
+                    baseToneShouldPlay=FALSE;
+                    if(buttonOnString.tag>=10){
+                        buttonOnString.tag=0;
+                    }
+                    NSMutableArray *playerArray = [tonesOfString0 objectAtIndex:i+1];
+                    AVAudioPlayer *toneToPlay = [playerArray objectAtIndex:buttonOnString.tag];
+                    [toneToPlay play];
+                    buttonOnString.tag+=1;
+                    return;
+                    
                 }
-                else if(string0[1]==1){
-                    NSLog(@"tone02 should play");
+            }
+            if(baseToneShouldPlay){
+                if(_currentChannelBaseToneString0>=10){
+                    _currentChannelBaseToneString0=0;
+                }
 
-                    [tone01[_currentChannel] play];
+                NSMutableArray *toneArray = [tonesOfString0 objectAtIndex:0];
+                AVAudioPlayer *toneToPlay = [toneArray objectAtIndex:_currentChannelBaseToneString0];
+                _currentChannelBaseToneString0++;
+                [toneToPlay play];
                 
-                }
-                else if(string0[2]==1){
-                    NSLog(@"tone03 should play");
-
-                    [tone02[_currentChannel] play];
-
-                }
-                else{
-                    NSLog(@"base tone should play");
-
-                    [basetone0[_currentChannel] play];
-
-                }
+            }
             
         }
         
-        else if([stringNumber isEqual:@"<01>"]&&string1!=nil){
+        else if([stringNumber isEqual:@"<01>"]){
             NSLog(@"string 1 played");
-            if(string1[0]==1){
-                [tone10[_currentChannel] play];
+            for (int i=string1.count-1; i>=0; i--) {
+                // NSLog(@"object from array %@", [testString2 objectAtIndex:i]);
+                UIButton *buttonOnString=[string1 objectAtIndex:i];
+                if(buttonOnString.selected ==TRUE){
+                    baseToneShouldPlay=FALSE;
+                    if(buttonOnString.tag>=10){
+                        buttonOnString.tag=0;
+                    }
+                    NSMutableArray *playerArray = [tonesOfString1 objectAtIndex:i+1];
+                    AVAudioPlayer *toneToPlay = [playerArray objectAtIndex:buttonOnString.tag];
+                    [toneToPlay play];
+                    buttonOnString.tag+=1;
+                    return;
+                    
+                }
             }
-            else if(string1[1]==1){
-                [tone11[_currentChannel] play];
-                
-            }
-            else if(string1[2]==1){
-                [tone12[_currentChannel] play];
-                
-            }
-            else{
-                [basetone1[_currentChannel] play];
+            if(baseToneShouldPlay){
+                if(_currentChannelBaseToneString1>=10){
+                    _currentChannelBaseToneString1=0;
+                }
+
+                NSMutableArray *toneArray = [tonesOfString1 objectAtIndex:0];
+                AVAudioPlayer *toneToPlay = [toneArray objectAtIndex:_currentChannelBaseToneString1];
+                _currentChannelBaseToneString1++;
+                [toneToPlay play];
                 
             }
             
@@ -519,49 +512,78 @@ int _currentChannel=0;
         
         
         else if([stringNumber isEqual:@"<02>"]){
-
             NSLog(@"string 2 played");
-            if(string2[0]==1){
-                [tone20[_currentChannel] play];
-            }
-            else if(string2[1]==1){
-                [tone21[_currentChannel] play];
-                
-            }
-            else if(string2[2]==1){
-                [tone22[_currentChannel] play];
-                
-            }
-            else{
-                [basetone2[_currentChannel] play];
-                
-            }
+            for (int i=string2.count-1; i>=0; i--) {
+               // NSLog(@"object from array %@", [testString2 objectAtIndex:i]);
+                UIButton *buttonOnString=[string2 objectAtIndex:i];
+                if(buttonOnString.selected ==TRUE){
+                    baseToneShouldPlay=FALSE;
+                    if(buttonOnString.tag>=10){
+                        buttonOnString.tag=0;
+                    }
+                    NSMutableArray *playerArray = [tonesOfString2 objectAtIndex:i+1];
+                    AVAudioPlayer *toneToPlay = [playerArray objectAtIndex:buttonOnString.tag];
+                    [toneToPlay play];
+                    buttonOnString.tag+=1;
 
+                    return;
+
+                }
+            }
+            if(baseToneShouldPlay){
+                if(_currentChannelBaseToneString2>=10){
+                    _currentChannelBaseToneString2=0;
+                }
+
+                NSMutableArray *toneArray = [tonesOfString2 objectAtIndex:0];
+                AVAudioPlayer *toneToPlay = [toneArray objectAtIndex:_currentChannelBaseToneString2];
+                _currentChannelBaseToneString2++;
+                [toneToPlay play];
+
+            }
             
         }
         else if([stringNumber isEqual:@"<03>"]){
             NSLog(@"string 3 played");
-            if(string3[0]==1){
-                [tone30[_currentChannel] play];
+            for (int i=string3.count-1; i>=0; i--) {
+                // NSLog(@"object from array %@", [testString2 objectAtIndex:i]);
+                UIButton *buttonOnString=[string3 objectAtIndex:i];
+                if(buttonOnString.selected ==TRUE){
+                    baseToneShouldPlay=FALSE;
+                    if(buttonOnString.tag>=10){
+                        buttonOnString.tag=0;
+                    }
+
+                    NSMutableArray *playerArray = [tonesOfString3 objectAtIndex:i+1];
+                    AVAudioPlayer *toneToPlay = [playerArray objectAtIndex:buttonOnString.tag];
+                    [toneToPlay play];
+                    buttonOnString.tag+=1;
+
+                    return;
+                    
+                }
             }
-            else if(string3[1]==1){
-                [tone31[_currentChannel] play];
+            if(baseToneShouldPlay){
+                if(baseToneShouldPlay){
+                    if(_currentChannelBaseToneString3>=10){
+                        _currentChannelBaseToneString3=0;
+                    }
+                    
+
+                NSMutableArray *toneArray = [tonesOfString3 objectAtIndex:0];
+                AVAudioPlayer *toneToPlay = [toneArray objectAtIndex:_currentChannelBaseToneString3];
+                _currentChannelBaseToneString3++;
+                [toneToPlay play];
                 
-            }
-            else if(string3[2]==1){
-                [tone32[_currentChannel] play];
-                
-            }
-            else{
-                [basetone3[_currentChannel] play];
-                
-            }
             }
         }
     
-
+    }
     
 }
+}
+
+
 
 
 - (void)peripheralDidDisconnect{

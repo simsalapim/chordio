@@ -15,7 +15,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    // Load NIB based on current platform
+    // Load NIB
     NSString *nibName;
     nibName = @"BLEMainViewController_iPhone";
     self.mainViewController = [[BLEMainViewController alloc]
