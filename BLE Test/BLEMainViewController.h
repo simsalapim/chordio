@@ -11,8 +11,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import <CoreAudio/CoreAudioTypes.h>
 
-@interface BLEMainViewController : UIViewController <UINavigationControllerDelegate, CBCentralManagerDelegate, UARTPeripheralDelegate, AVAudioPlayerDelegate>
-
+@interface BLEMainViewController : UIViewController <UINavigationControllerDelegate, CBCentralManagerDelegate, UARTPeripheralDelegate, AVAudioPlayerDelegate, UIScrollViewDelegate>
+{
+    UIScrollView *scrollView;
+}
 typedef enum {
     ConnectionModeNone  = 0,
     ConnectionModePinIO,
@@ -32,3 +34,13 @@ typedef enum {
 @property (nonatomic, assign) ConnectionStatus                  connectionStatus;
 
 @end
+
+//@implementation BLEMainViewController
+//- (void)drawRect:(CGRect)rect{
+  //  CGRect rectangle = CGRectMake(0, 100, 320, 100);
+   // CGContextRef context = UIGraphicsGetCurrentContext();
+  //  CGContextSetRGBFillColor(context, 1.0, 0.0, 0.0, 1.0);
+  //  CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0);
+  //  CGContextFillRect(context, rectangle);
+//}
+//@end
